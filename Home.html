@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module">
+      import { v4 as uuidv4 } from "https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/esm-browser/index.js";
+
+      window.uuidv4 = uuidv4;
+    </script>
+    <script
+      src="https://kit.fontawesome.com/b25957ae4f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../Exam/css/Home.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><i class="fa-solid fa-mug-saucer"></i></div>
+      <ul class="nav-list">
+        <a class="nav-item" href="Front.html">Home</a>
+        <a class="nav-item" href="#">Cart</a>
+        <a class="nav-item" href="#">Services</a>
+        <a id="nowsite" href="#">Production</a>
+      </ul>
+
+      <ul class="user">
+        <a id="login_btn" class="nav-item face" href="login.html">Username</a>
+        <div class="logo face"><i class="fa-solid fa-user"></i></div>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="card register">
+        <h2>Create Product</h2>
+        <form>
+          <input id="product" type="text" placeholder="Product Name" required />
+          <input
+            id="description"
+            type="text"
+            placeholder="Description"
+            required
+          />
+          <input
+            id="ingredient"
+            type="text"
+            placeholder="Ingredient"
+            required
+          />
+          <input id="price" type="text" placeholder="Price" required />
+          <input id="image" type="text" placeholder="Image" />
+          <select name="" id="select">
+            <option value="coffee">coffee</option>
+            <option value="tea">tea</option>
+            <option value="dessert">dessert</option>
+            <option value="other">other</option>
+          </select>
+
+          <button id="submit" type="submit">Add New Product</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="../Exam/js/Home.js"></script>
+  </body>
+</html>

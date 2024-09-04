@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000;
+    color: burlywood; 
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.logo {
+    color: brown;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    line-height: 50px;
+    font-size: 150%;
+    margin-right: 10px;
+}
+
+.face {
+    margin-left: 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    color: burlywood;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    line-height: 30px;
+    font-size: 120%;
+}
+
+.nav-item:hover {
+    border-radius: 5px;
+}
+
+/* Animation */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: brown;
+    color: #000;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#nowsite{
+    color: burlywood;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    line-height: 30px;
+    font-size: 120%;
+    border-bottom: 3px solid brown;
+}
+.user {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+.face {
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.card {
+    width: 45%;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 250%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ffcc00;
+    font-size: 18px;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+    border-bottom-color: #ff9900;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+    background-color: #f8f8f8; 
+    font-size: 16px;
+    color: #333; 
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    margin-bottom: 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* New Animation */
+@keyframes fadeInTogether {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the fadeInTogether animation */
+.navbar, .nav-list, .user, .card {
+    animation: fadeInTogether 1s ease-in-out both;
+}

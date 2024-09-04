@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Product</title>
+    <script type="module">
+      import { v4 as uuidv4 } from "https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/esm-browser/index.js";
+
+      window.uuidv4 = uuidv4;
+    </script>
+    <link rel="stylesheet" href="../Exam/css/edit.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card register">
+        <h2>Edit Product</h2>
+        <form>
+          <input
+            id="product"
+            type="text"
+            placeholder="Product Name....."
+            required
+          />
+          <input
+            id="description"
+            type="text"
+            placeholder="Description"
+            required
+          />
+          <input
+            id="ingredient"
+            type="text"
+            placeholder="Ingredient"
+            required
+          />
+          <input
+            id="price"
+            type="text"
+            placeholder="Price............."
+            required
+          />
+          <input
+            id="image"
+            type="text"
+            placeholder="Image..................."
+          />
+          <select name="" id="select">
+            <option value="coffee">coffee</option>
+            <option value="tea">tea</option>
+            <option value="dessert">dessert</option>
+            <option value="other">other</option>
+          </select>
+
+          <button id="submit" type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="../Exam/js/edit.js"></script>
+  </body>
+</html>

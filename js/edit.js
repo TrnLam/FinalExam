@@ -8,13 +8,14 @@ import {
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC7cBhgG19WmkiTHZWIzGouoPD66ssI0mE",
-  authDomain: "product-80da8.firebaseapp.com",
-  databaseURL: "https://product-80da8-default-rtdb.firebaseio.com",
-  projectId: "product-80da8",
-  storageBucket: "product-80da8.appspot.com",
-  messagingSenderId: "485102845839",
-  appId: "1:485102845839:web:90a44bcfd346f58d1395fa",
+  apiKey: "AIzaSyA9Q7PyiXHv0ivY9eF9uZRhn9JnyOO7ks4",
+  authDomain: "product2-f4554.firebaseapp.com",
+  databaseURL: "https://product2-f4554-default-rtdb.firebaseio.com",
+  projectId: "product2-f4554",
+  storageBucket: "product2-f4554.appspot.com",
+  messagingSenderId: "843173928034",
+  appId: "1:843173928034:web:79d23c2293a64e3899453b",
+  measurementId: "G-TMF1QHFK6Z",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -51,6 +52,6 @@ submit.addEventListener("click", (e) => {
     price: price.value,
   }).then(() => {
     alert("edit success");
-    window.location.href = "Front.html";
+    window.location.href = "index.html";
   });
 });

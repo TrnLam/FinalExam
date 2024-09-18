@@ -4,6 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/b25957ae4f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><i class="fa-solid fa-mug-saucer"></i></div>
+      <ul class="nav-list">
+        <a class="nav-item" href="index.html">Home</a>
+        <a id="nowsite" href="#">Cart</a>
+        <a class="nav-item" href="#">Services</a>
+        <a class="nav-item" href="#">Production</a>
+      </ul>
+
+      <ul class="user">
+        <a id="login_btn" class="nav-item face" href="login.html">Username</a>
+        <div class="logo face"><i class="fa-solid fa-user"></i></div>
+      </ul>
+    </nav>
+    <div id="background">
+      <div id="cartcontainer"></div>
+    </div>
+
+    <script type="module" src="./js/cart.js"></script>
+  </body>
 </html>

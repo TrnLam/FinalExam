@@ -26,13 +26,14 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC7cBhgG19WmkiTHZWIzGouoPD66ssI0mE",
-  authDomain: "product-80da8.firebaseapp.com",
-  databaseURL: "https://product-80da8-default-rtdb.firebaseio.com",
-  projectId: "product-80da8",
-  storageBucket: "product-80da8.appspot.com",
-  messagingSenderId: "485102845839",
-  appId: "1:485102845839:web:90a44bcfd346f58d1395fa",
+  apiKey: "AIzaSyA9Q7PyiXHv0ivY9eF9uZRhn9JnyOO7ks4",
+  authDomain: "product2-f4554.firebaseapp.com",
+  databaseURL: "https://product2-f4554-default-rtdb.firebaseio.com",
+  projectId: "product2-f4554",
+  storageBucket: "product2-f4554.appspot.com",
+  messagingSenderId: "843173928034",
+  appId: "1:843173928034:web:79d23c2293a64e3899453b",
+  measurementId: "G-TMF1QHFK6Z",
 };
 
 // Initialize Firebase
@@ -47,6 +48,21 @@ let username_register = document.getElementById("username_input_register");
 let password_register = document.getElementById("password_input_register");
 let login_btn = document.getElementById("login_btn");
 let register_btn = document.getElementById("register_btn");
+let product_button = document.getElementsByClassName("nav-item");
+
+product_button[0].addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+for (let i = 1; i < product_button.length; i++) {
+  product_button[i].addEventListener("click", () => {
+    alert("register/login first!");
+  });
+}
+
+let logout = JSON.parse(localStorage.getItem("users"));
+console.log(logout);
+let users = "";
+localStorage.setItem("users", JSON.stringify(users));
 
 ///////////////////////////////////////////////////////////////////// Đăng ký 1 tài khoản
 register_btn.addEventListener("click", function () {
@@ -97,10 +113,10 @@ login_btn.addEventListener("click", function () {
       };
       localStorage.setItem("users", JSON.stringify(users));
       if (username == "admin@gmail.com") {
-        window.location.href = "Front.html";
+        window.location.href = "index.html";
       } else {
         alert("Đăng nhập thành công");
-        window.location.href = "Front.html";
+        window.location.href = "index.html";
       }
     })
     .catch((err) => {

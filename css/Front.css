@@ -1,4 +1,7 @@
 /* General Styles */
+*{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +14,7 @@ body {
 }
 
 
-/* Navbar Styles */
+
 .navbar {
     background-color: #000;
     color: burlywood; 
@@ -67,7 +70,7 @@ body {
     cursor: pointer;
 }
 
-/* Animation */
+
 .nav-item::after {
     content: '';
     position: absolute;
@@ -107,13 +110,34 @@ body {
     color: #fff;
 }
 
+#myBtn {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    color: black;
+    cursor: pointer;
+    border-radius: 30px;
+    opacity: 0.7;
+}
+
+#myBtn:hover {
+    background-color: #f1f1f1;
+}
 /* Search Module Styles */
 .search_module {
     width: 100%;
     max-width: 500px;
     margin-left: 25px;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: antiquewhite; /* Burlywood */
     border: 1px solid #8b4513; /* Brown */
     border-radius: 8px;
@@ -187,6 +211,100 @@ body {
     margin-right: 0;
 }
 
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(../img/bg_3.jpg);
+    background-size: cover;
+}
+
+.welcome {
+    position: relative;
+    top: 220px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 200%;
+    color: darkgoldenrod;
+}
+
+.amazing {
+    position: relative;
+    top: 230px;
+    margin-left: 450px;
+    margin-right: 450px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 250%;
+    color: white;
+    text-align: center;
+}
+
+.asmall {
+    position: relative;
+    color:rgb(179, 179, 179);
+    font-family: 'Lexend', sans-serif;
+    font-size: 120%;
+    margin-left: 400px;
+    margin-right: 400px;
+    top: 260px;
+    text-align: center;
+}
+.view1 {
+    color: white;
+    padding: 20px;
+    transition: all .2s ease;
+    border: 1px solid white;
+    font-family: 'Karla', sans-serif;
+    position: relative;
+    top: 300px;
+    margin: 2px;
+    text-decoration: none;
+}
+
+.view1:hover {
+    color: black;
+    background-color: #c49b63;
+    border: 1px solid #c49b63;
+}
+
+.view2 {
+    color: black;
+    padding: 20px;
+    transition: all .2s ease;
+    border: 1px solid #c49b63;
+    background-color: #c49b63;
+    font-family: 'Karla', sans-serif;
+    position: relative;
+    top: 300px;
+    margin: 2px;
+    text-decoration: none;
+}
+
+.view2:hover {
+    color: #c49b63;
+    border: 1px solid #c49b63;
+    background-color: transparent;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+}
+.discovers {
+    font-family: 'Dancing Script', cursive;
+    font-size: 300%;
+    color:brown;
+    font-weight: bold;
+
+}
+
+.ours {
+    position: relative;
+    top: -11px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 200%;
+    color:#292828;
+}
+
 /* Product Card Styles */
 .bigcontainer {
     flex-wrap: wrap;
@@ -223,7 +341,7 @@ body {
 
 .product_card:hover{
     background:rgb(255, 245, 233);
-    margin-top: -0.1%;
+    transform: scale(1.03   );
     
 }
 .bottom {
@@ -530,6 +648,7 @@ footer .fa-whatsapp{
         font-size: 11px;
     }
 }
+
     
 
 

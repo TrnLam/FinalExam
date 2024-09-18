@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    background-color:rgb(221, 190, 149);
+    overflow-x: hidden;
+
+}
+
+.navbar {
+    background-color: #000;
+    color: burlywood; 
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+    color: brown;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    line-height: 50px;
+    font-size: 150%;
+    margin-right: 10px;
+}
+
+.face {
+    margin-left: 0;
+}
+
+
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    color: burlywood;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    line-height: 30px;
+    font-size: 120%;
+}
+
+.nav-item:hover {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: brown;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0;
+}
+#nowsite{
+    color: burlywood    ;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    line-height: 30px;
+    font-size: 120%;
+    border-bottom: 3px solid brown;
+}
+.user {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+.face {
+    color:green;
+
+}
+#login_btn{
+    color: #fff;
+}
+
+#background{
+    background-image: url(../img/bg_3.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+      
+
+
+}
+
+#cartcontainer{
+  flex-wrap: wrap;
+    margin: 100px;
+    display: flex;
+
+}
+
+.productcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f5f5dc; /* Light burlywood */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 350px;
+    margin-right: 50px;
+    margin-top: 40px;
+  }
+  
+  .productcard:hover {
+    transform: scale(1.05);
+  }
+  
+  .img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .img img {
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+  }
+  
+  .first {
+    padding: 15px;
+    background-color: #fff; /* White background for contrast */
+    width: 90%;
+    height: 25%;
+  }
+  
+  .product_name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3b2f2f; /* Dark brown */
+    margin-bottom: 5px;
+  }
+  
+  .product_description {
+    font-size: 1em;
+    color: #5a4f4f; /* Medium brown */
+    margin-bottom: 5px;
+  }
+  
+  .product_ingredient,
+  .product_type {
+    font-size: 0.9em;
+    color: #2e8b57; /* Green */
+    margin-bottom: 5px;
+  }
+  
+  .second {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #3b2f2f; /* Dark brown */
+    color: white;
+  }
+  
+  .product_quantity {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .product_price {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  /* Định nghĩa animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
-    <link rel="stylesheet" href="../Exam/css/Front.css" />
+    <link rel="stylesheet" href="./css/Front.css" />
     <script
       src="https://kit.fontawesome.com/b25957ae4f.js"
       crossorigin="anonymous"
@@ -20,8 +20,8 @@
       <div class="logo"><i class="fa-solid fa-mug-saucer"></i></div>
       <ul class="nav-list">
         <a id="nowsite" href="#">Home</a>
-        <a class="nav-item" href="#">Cart</a>
-        <a class="nav-item" href="#">Services</a>
+        <div id="cartsite" class="nav-item">Cart</div>
+        <div class="nav-item">Services</div>
         <div id="add" class="nav-item">Production</div>
       </ul>
 
@@ -30,7 +30,26 @@
         <div class="logo face"><i class="fa-solid fa-user"></i></div>
       </ul>
     </nav>
+    <button id="myBtn" title="Lên đầu trang">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
+    <div class="home">
+      <div class="welcome">Welcome</div>
+      <div class="amazing">AMAZING TATSE & BEAUTIFUL PLACE</div>
+      <div class="asmall">
+        A small river named Duden flows by their place and supplies it with the
+        necessary regelialia
+      </div>
+      <div style="display: flex; justify-content: center">
+        <a class="view2" href="#tp2">Stoty of us</a>
+        <a class="view1" href="#tp">View Menu</a>
+      </div>
+    </div>
+    <div  id="tp" class="title">
+          <div class="discovers">DISCOVER</div>
+          <div class="ours">BEST COFFEE SELLER</div>
+    </div>
     <div class="search_module">
       <div class="searchs">
         <input id="search" placeholder="product.." type="text" />
@@ -47,7 +66,7 @@
 
     <div class="bigcontainer"></div>
 
-    <div class="part3">
+    <div id="tp2" class="part3">
         <div class="right"></div>
         <div class="middle">
             <div class="paragraph">
@@ -137,6 +156,6 @@
 
 
 
-    <script type="module" src="../Exam/js/Front.js"></script>
+    <script type="module" src="./js/Front.js"></script>
   </body>
 </html>

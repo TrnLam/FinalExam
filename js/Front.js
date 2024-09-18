@@ -13,35 +13,57 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebas
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC7cBhgG19WmkiTHZWIzGouoPD66ssI0mE",
-  authDomain: "product-80da8.firebaseapp.com",
-  databaseURL: "https://product-80da8-default-rtdb.firebaseio.com",
-  projectId: "product-80da8",
-  storageBucket: "product-80da8.appspot.com",
-  messagingSenderId: "485102845839",
-  appId: "1:485102845839:web:90a44bcfd346f58d1395fa",
+  apiKey: "AIzaSyA9Q7PyiXHv0ivY9eF9uZRhn9JnyOO7ks4",
+  authDomain: "product2-f4554.firebaseapp.com",
+  databaseURL: "https://product2-f4554-default-rtdb.firebaseio.com",
+  projectId: "product2-f4554",
+  storageBucket: "product2-f4554.appspot.com",
+  messagingSenderId: "843173928034",
+  appId: "1:843173928034:web:79d23c2293a64e3899453b",
+  measurementId: "G-TMF1QHFK6Z",
 };
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-
+document.getElementById("myBtn").addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
 let bigcontainer = document.getElementsByClassName("bigcontainer");
 let buttons = document.getElementsByClassName("button");
 let button1 = document.getElementById("search_button");
 let search = document.getElementById("search");
 let login_btn = document.getElementById("login_btn");
 let add = document.getElementById("add");
+let nav_item = document.getElementsByClassName("nav-item");
 let username = JSON.parse(localStorage.getItem("users")).username;
 let userID = JSON.parse(localStorage.getItem("users")).userID;
-
-login_btn.innerText = username;
-add.addEventListener("click", () => {
-  if (username == "admin@gmail.com") {
-    window.location.href = "Home.html";
-  } else {
-    alert("you're not the admin");
+let cartsite = document.getElementById("cartsite");
+// logic button
+if (username == null) {
+  for (let i = 0; i + 1 < nav_item.length; i++) {
+    nav_item[i].addEventListener("click", () => {
+      alert("login/signin first!");
+    });
+    login_btn.innerText = "sign in / log in";
   }
-});
+} else {
+  login_btn.innerText = username;
+  cartsite.addEventListener("click", () => {
+    if (username == "admin@gmail.com") {
+      alert("you are not the customer");
+    } else {
+      window.location.href = "cart.html";
+    }
+  });
+  add.addEventListener("click", () => {
+    if (username == "admin@gmail.com") {
+      window.location.href = "Home.html";
+    } else {
+      alert("you're not the admin");
+    }
+  });
+}
 
 onValue(ref(database, "AllProduct"), (snap) => {
   let data = snap.val();

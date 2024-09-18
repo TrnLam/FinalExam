@@ -31,9 +31,10 @@ let login_btn = document.getElementById("login_btn");
 let username = JSON.parse(localStorage.getItem("users")).username;
 login_btn.innerText = username;
 let Usercart = JSON.parse(localStorage.getItem("currentUser")).cart;
+let totaldiv = document.getElementById("total");
 
 console.log(Usercart);
-
+let total = 0;
 onValue(ref(database, "AllProduct"), (snap) => {
   let data = snap.val();
   data = Object.values(data);
@@ -58,7 +59,7 @@ function renderPro(data, Usercart) {
   let productcard = document.createElement("div");
   productcard.className = "productcard";
   productcard.innerHTML = `
-  
+
           <div class="img">
             <img
               src="${data.image}
@@ -76,7 +77,12 @@ function renderPro(data, Usercart) {
             <div class="product_quantity">Amount: ${Usercart.quantity}</div>
             <div class="product_price">${data.price}$/1cup</div>
           </div>
-        
+
   `;
+  total = total + data.price * Usercart.quantity;
+  console.log(data.price * Usercart.quantity);
+
   cartcontainer.appendChild(productcard);
+  console.log(total);
+  totaldiv.innerText = `${total} $`;
 }

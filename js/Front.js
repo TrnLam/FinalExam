@@ -111,7 +111,7 @@ function renderPro(data) {
               ${data.description}
             </p>
             <p class="ingredient">${data.ingredient}</p>
-            <p class="type">${data.select}</p>
+            <p class="type">Type: ${data.select}</p>
   
             <div class="bottom">
               <div class="price">
@@ -153,11 +153,10 @@ function renderEditbutton(data) {
 //renderaddtocart
 function renderaddtocart(data) {
   let button3 = document.querySelectorAll(".add_to_cart");
-  if (username != "admin@gmail.com") {
+  if (username != "admin@gmail.com" && username != null) {
     for (let i = 0; i < button3.length; i++) {
       button3[i].addEventListener("click", () => {
         let listcartID = data[i].productID;
-        console.log(listcartID);
 
         let currentuser = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -167,21 +166,18 @@ function renderaddtocart(data) {
         };
         if (currentuser.cart == "") {
           currentuser.cart.push(productInCart);
-          console.log("1");
 
           localStorage.setItem("currentUser", JSON.stringify(currentuser));
         } else {
           let condition = false;
           let index = 0;
           for (let i = 1; i < currentuser.cart.length; i++) {
-            console.log(currentuser.cart[i]);
-
             if (listcartID != currentuser.cart[i].productID) {
               condition = false;
             } else {
               condition = true;
               index = `${i}`;
-              console.log(index);
+
               break;
             }
           }
@@ -201,6 +197,18 @@ function renderaddtocart(data) {
         update(ref(database, "users/" + userID), {
           cart: newCart,
         });
+      });
+    }
+  } else if (username == null) {
+    for (let i = 0; i < button3.length; i++) {
+      button3[i].addEventListener("click", () => {
+        alert("Sign in/log in first!");
+      });
+    }
+  } else if (username == "admin@gmail.com") {
+    for (let i = 0; i < button3.length; i++) {
+      button3[i].addEventListener("click", () => {
+        alert("you are not the customer");
       });
     }
   }
